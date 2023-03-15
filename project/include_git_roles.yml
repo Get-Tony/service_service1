@@ -1,0 +1,17 @@
+---
+- name: Clone git_roles
+  local_action:
+    module: git
+    repo: "{{ item.repo }}"
+    version: "{{ item.version }}"
+    dest: "./roles/{{ item.name }}"
+    force: true
+  ignore_errors: true
+  with_items: "{{ git_roles }}"
+  when: git_roles is defined
+
+- name: Include git_roles
+  include_role:
+    name: "{{ item.name }}"
+  with_items: "{{ git_roles }}"
+  when: git_roles is defined

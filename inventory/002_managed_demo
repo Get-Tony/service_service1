@@ -1,0 +1,4 @@
+# Some remote host. The ssh_key must be installed on the remote host.
+# RENAME this file to 002_managed
+[managed]
+debian11

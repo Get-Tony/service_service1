@@ -1,0 +1,15 @@
+---
+
+- name: Configure Ansible Controller
+  hosts: controllers
+  tasks:
+    - name: Check for git_roles
+      include_tasks: include_git_roles.yml
+      when: git_roles is defined
+      tags: git_roles
+
+- name: Get IPv4 addresses for managed hosts
+  hosts: managed
+  roles:
+    - role: role_test
+      tags: role_test
