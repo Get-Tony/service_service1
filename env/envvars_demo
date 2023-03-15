@@ -1,8 +1,8 @@
 ---
 # Rename this file to envvars
-# The settings here are considered useful defaults for all services.
+# The settings here are considered useful defaults for all services
 # Assuming explicit ssh keys are not used, the user running the ansible-playbook
-# command must have passwordless sudo access on the target hosts.
+# command must have passwordless sudo access on the target hosts
 
 ANSIBLE_VERBOSITY: 0
 ANSIBLE_HOST_KEY_CHECKING: false
@@ -13,7 +13,7 @@ ANSIBLE_GATHERING: smart
 # Disable logging to syslog on target hosts. default: false
 ANSIBLE_NO_TARGET_SYSLOG: false
 
-# The free strategy will allow us to run multiple tasks in parallel.
-# This should shorten our overall execution time.
-# Side effect: The output will be unorganized (less readable).
+# The free strategy will allow us to run multiple tasks in parallel
+# This should shorten our overall execution time
+# Side effect: The output will be unorganized (less readable)
 ANSIBLE_STRATEGY: free

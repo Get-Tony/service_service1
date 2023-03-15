@@ -1,8 +1,4 @@
 # Description: Inventory file for the controllers demo
 # RENAME this file to 001_controllers
-# The group 'controllers' will be used to configure localhost.
-# The host variables are better defined in the host_vars/localhost.yml file.
-# Included here for demo purposes only.
-#
 [controllers]
-localhost ansible_connection=local ansible_python_interpreter=/usr/bin/python3
+localhost
