@@ -19,8 +19,8 @@
       when: git_roles is defined
       tags: git_roles
 
-- name: Get IPv4 addresses for managed hosts
-  hosts: managed
-  roles:
-    - role: role_test
-      tags: role_test
+# - name: Get IPv4 addresses for managed hosts
+#   hosts: managed
+#   roles:
+#     - role: role_test
+#       tags: role_test
