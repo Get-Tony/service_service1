@@ -1,8 +1,19 @@
 ---
 
+- name: Create roles directory if missing
+  hosts: controllers
+  tasks:
+
 - name: Configure Ansible Controller
   hosts: controllers
   tasks:
+    - name: Create roles directory
+      ansible.builtin.file:
+        path: ./roles
+        state: directory
+        mode: 0755
+      tags: git_roles
+
     - name: Check for git_roles
       include_tasks: include_git_roles.yml
       when: git_roles is defined
