@@ -7,7 +7,7 @@
 - name: Configure Ansible Controller
   hosts: controllers
   tasks:
-    - name: Create roles directory
+    - name: Ensure roles directory
       ansible.builtin.file:
         path: ./roles
         state: directory
