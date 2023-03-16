@@ -1,17 +1,15 @@
----
 - name: Clone git_roles
-  local_action:
-    module: git
+  ansible.builtin.git:
     repo: "{{ item.repo }}"
     version: "{{ item.version }}"
     dest: "./roles/{{ item.name }}"
     force: true
-  ignore_errors: true
+  delegate_to: localhost
   with_items: "{{ git_roles }}"
   when: git_roles is defined
 
 - name: Include git_roles
-  include_role:
+  ansible.builtin.include_role:
     name: "{{ item.name }}"
   with_items: "{{ git_roles }}"
   when: git_roles is defined
