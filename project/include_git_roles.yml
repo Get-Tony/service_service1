@@ -1,11 +1,4 @@
-- name: Set git http_proxy
-  git_config:
-    - name: http_proxy
-      value: "{{ http_proxy }}"
-      scope: local
-  when: http_proxy is defined
-
-- name: Clone git_roles
+- name: "Clone git_roles"
   ansible.builtin.git:
     repo: "{{ item.repo }}"
     version: "{{ item.version }}"
