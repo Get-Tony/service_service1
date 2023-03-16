@@ -6,7 +6,12 @@ Part of a demo of the Runner framework.
 
 ### Demo files
 
-All '*_demo*' files need to be read, verified and renamed before use.
+The following files need to be changed to suit your environment:
+
+- env/envvars_demo
+- env/ssh_key_demo
+- inventory/001_controllers_demo
+- inventory/002_managed_demo
 
 ### Group variables
 
